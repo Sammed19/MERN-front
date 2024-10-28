@@ -1,6 +1,6 @@
 // client/src/App.js
 import React from 'react';
-import TodoApp from './Todoapp';
+import Todoapp from './Todoapp';
 
 import './app.css';
 
@@ -8,7 +8,7 @@ import './app.css';
 function App() {
   return (
     <div className="App">
-     <TodoApp />
+     <Todoapp />
     </div>
   );
 }
