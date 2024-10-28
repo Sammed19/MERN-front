@@ -1,8 +1,8 @@
 // client/src/App.js
 import React from 'react';
-import TodoApp from './TodoApp';
+import TodoApp from './Todoapp';
 
-import './App.css';
+import './app.css';
 
 
 function App() {
