@@ -3,7 +3,7 @@ import React from 'react';
 import TodoApp from './TodoApp';
 
 import './app.css';
-import TodoApp from './Todoapp';
+
 
 function App() {
   return (
