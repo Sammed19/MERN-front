@@ -11,7 +11,7 @@ const TodoApp = () => {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/todos');
+        const response = await axios.get('https://mern-backend-application.onrender.com/api/todos');
         setTodos(response.data);
       } catch (err) {
         setError('Failed to load todos. Please try again later.');
@@ -25,7 +25,7 @@ const TodoApp = () => {
   const addTodo = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/todos', { title });
+      const response = await axios.post('https://mern-backend-application.onrender.com/api/todos', { title });
       setTodos([...todos, response.data]);
       setTitle('');
     } catch (err) {
@@ -38,7 +38,7 @@ const TodoApp = () => {
   const toggleCompletion = async (id) => {
     const todo = todos.find((t) => t._id === id);
     try {
-      await axios.patch(`http://localhost:5000/api/todos/${id}`, {
+      await axios.patch(`https://mern-backend-application.onrender.com/api/todos/${id}`, {
         completed: !todo.completed,
       });
       setTodos(
@@ -55,7 +55,7 @@ const TodoApp = () => {
   // Delete a todo
   const deleteTodo = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/todos/${id}`);
+      await axios.delete(`https://mern-backend-application.onrender.com/api/todos/${id}`);
       setTodos(todos.filter((t) => t._id !== id));
     } catch (err) {
       setError('Failed to delete todo. Please try again later.');
